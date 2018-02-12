@@ -39,3 +39,14 @@ bot.onText(/\/price/, async msg => {
 
   bot.sendMessage(chatId, formatPrice(await getPrice()));
 });
+
+const HELP_MESSAGE = `
+/help — get this message
+/price — get the price of R token
+`;
+
+bot.onText(/\/help/, async msg => {
+  const chatId = msg.chat.id;
+
+  bot.sendMessage(chatId, HELP_MESSAGE);
+});
