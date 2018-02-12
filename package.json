@@ -1,0 +1,41 @@
+{
+  "name": "revainbot",
+  "version": "0.1.0",
+  "description": "Unofficial Revain Telegram Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/102/RevainBot.git"
+  },
+  "keywords": [
+    "revain",
+    "telegram",
+    "bot"
+  ],
+  "author": "Roman Gusev",
+  "bugs": {
+    "url": "https://github.com/102/RevainBot/issues"
+  },
+  "homepage": "https://github.com/102/RevainBot#readme",
+  "dependencies": {
+    "node-cache": "^4.1.1",
+    "node-fetch": "^2.0.0",
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
